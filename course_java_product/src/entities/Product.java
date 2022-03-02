@@ -1,13 +1,14 @@
 package entities;
 
 public class Product {
-	public String name;
-	public double price;
-	public int quantity;
-	
+	private String name;
+	private double price;
+	private int quantity;
+
 	// Construtor padrao
 	public Product() {
 	}
+
 	/*
 	 * Construtor: é uma operação especial da classe, que executa no momento da
 	 * instanciacao do objeto
@@ -26,7 +27,38 @@ public class Product {
 		this.name = name;
 		this.price = price;
 	}
+
+
+	/*
+	 * Encapsulamento: É um princípio que consiste em esconder detalhes de
+	 * implementação de uma classe, expondo apenas operações seguras e que mantenham
+	 * os objetos em um estado consistente.
+	 * Regra de ouro: o objeto deve sempre estar em um estado consistente, e a
+	 * própria classe deve garantir isso.
+	 */
+	// Metodos gets and sets
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public double getPrice() {
+		return price;
+	}
+
+	public void setPrice(double price) {
+		this.price = price;
+	}
+
+	public int getQuantity() {
+		return quantity;
+	}	
 	
+	
+	// Metodos de operações
 	public double totalValueInStock() {
 		return price * quantity;
 	}
