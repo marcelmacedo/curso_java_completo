@@ -4,7 +4,10 @@ public class Product {
 	public String name;
 	public double price;
 	public int quantity;
-
+	
+	// Construtor padrao
+	public Product() {
+	}
 	/*
 	 * Construtor: é uma operação especial da classe, que executa no momento da
 	 * instanciacao do objeto
@@ -15,6 +18,15 @@ public class Product {
 		this.quantity = quantity;
 	}
 
+	/*
+	 * Sobrecarga é disponibilizar mais de uma versão da mesma operacao do
+	 * construtor
+	 */
+	public Product(String name, double price) {
+		this.name = name;
+		this.price = price;
+	}
+	
 	public double totalValueInStock() {
 		return price * quantity;
 	}

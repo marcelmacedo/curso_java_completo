@@ -16,10 +16,12 @@ public class Program {
 		String name = sc.nextLine();
 		System.out.print("Price: ");
 		double price = sc.nextDouble();
-		System.out.print("Quantity in stock: ");
-		int quantity = sc.nextInt();
+
+		/* removido para testar sobrecarga de metodos na class Product
+		 * System.out.print("Quantity in stock: "); int quantity = sc.nextInt();
+		 */
 		
-		Product product = new Product(name, price, quantity);
+		Product product = new Product(name, price);
 		
 		System.out.println();
 		System.out.println("Product data: " + product);
@@ -27,7 +29,7 @@ public class Program {
 		System.out.println();
 		
 		System.out.print("Enter the number of products to be added in stock: ");
-		quantity = sc.nextInt();
+		int quantity = sc.nextInt();
 		product.addProducts(quantity);
 		
 		System.out.println();
